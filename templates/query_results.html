@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Results for Table: {{ table }}</h2>
+    <table>
+        <tr>
+            {% for column in results[0].keys() %}
+                <th>{{ column }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in results %}
+            <tr>
+                {% for value in row %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
